@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+
 export default async function deneme({product}) {
 return(
     <div className="flex flex-col rounded-lg text-black place-center px-10 py-10 shadow-2xl justify-center items-center border">

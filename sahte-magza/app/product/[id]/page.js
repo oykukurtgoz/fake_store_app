@@ -1,7 +1,10 @@
 import React from 'react';
+import Navbar from '../../../navbar';
+import Footer from '../../../footer';
+
 
     async function getProducts() {
-         try{
+    try{
     const response =await fetch("https://fakestoreapi.com/products?limit=20");
   
     return response.json();
@@ -28,6 +31,8 @@ export default async function ProductPage({params}) {
 const product = await getProduct(params.id)
 
   return (
+    <>
+    <Navbar></Navbar>
     <div className='px-10 py-10' >
       <h1 className="text-black font-bold">{product.title}</h1>
       <div className='flex px-4 py-4'>
@@ -39,5 +44,7 @@ const product = await getProduct(params.id)
         </div>
       </div>
     </div>
+    <Footer></Footer>
+    </>
   );
 }
