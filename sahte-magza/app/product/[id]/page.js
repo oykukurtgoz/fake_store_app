@@ -1,6 +1,5 @@
 import React from 'react';
-import Navbar from '../../../navbar';
-import Footer from '../../../footer';
+
 
 
     async function getProducts() {
@@ -26,13 +25,12 @@ import Footer from '../../../footer';
         throw new Error(err)
     }
     }
-export default async function ProductPage({params}) {
-   
-const product = await getProduct(params.id)
 
-  return (
-    <>
-    <Navbar></Navbar>
+    export default async function ProductPage({params}) {
+    const product = await getProduct(params.id)
+
+    return (
+   
     <div className='px-10 py-10' >
       <h1 className="text-black font-bold">{product.title}</h1>
       <div className='flex px-4 py-4'>
@@ -44,7 +42,6 @@ const product = await getProduct(params.id)
         </div>
       </div>
     </div>
-    <Footer></Footer>
-    </>
+
   );
 }

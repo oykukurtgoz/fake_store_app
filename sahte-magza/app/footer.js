@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export default function footer(){  
+export default function Footer(){  
 
 return (
     <div className="bg-stone-300 p-20">
